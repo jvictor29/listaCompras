@@ -1,6 +1,17 @@
 let lista = [];
 let editIndex = -1;
 
+// Carrega a lista do localStorage ao iniciar
+function carregarLista() {
+    const listaSalva = localStorage.getItem("listaCompras");
+    lista = listaSalva ? JSON.parse(listaSalva) : [];
+}
+
+// Salva a lista no localStorage
+function salvarLista() {
+    localStorage.setItem("listaCompras", JSON.stringify(lista));
+}
+
 function renderizarLista() {
     const listaUl = document.getElementById("lista");
     listaUl.innerHTML = "";
@@ -41,6 +52,7 @@ function adicionarProduto() {
 
     inputNome.value = "";
     inputQtd.value = "";
+    salvarLista();
     renderizarLista();
 }
 
@@ -52,10 +64,18 @@ function editarProduto(index) {
 
 function excluirProduto(index) {
     lista.splice(index, 1);
+    salvarLista();
     renderizarLista();
 }
 
 function marcarComprado(index) {
     lista[index].comprado = !lista[index].comprado;
+    salvarLista();
     renderizarLista();
 }
+
+// Inicializa a lista ao carregar a página
+window.onload = function() {
+    carregarLista();
+    renderizarLista();
+};

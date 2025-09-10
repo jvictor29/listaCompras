@@ -15,6 +15,32 @@
      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
  }
 
+ /* .bg-img {
+    background-image: url('img/background.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+.bg-img {
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.bg-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(86, 85, 85, 0.6); /* branco com opacidade 0.5, deixa a imagem mais clara */
+    z-index: 0;
+}
+
+.bg-img > * {
+    position: relative;
+    z-index: 1;
+}
+
  footer {
      background: #343a40;
      color: #fff;

@@ -11,34 +11,35 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body class="bg-img">
     <!-- HEADER -->
     <header>
-        🛍️ Lista de Compras
+        🛍️ Minha Lista de Compras
     </header>
 
     <!-- CONTEÚDO -->
-    <div class="container my-4 flex-grow-1">
-        <div class="card p-4">
-            <h2 class="text-center mb-4 text-success">📋 Minha Lista de Compras</h2>
+    <div class="container my-4 flex-grow-1 ">
+            <div class="card p-4">
+                <h2 class="text-center mb-4 text-success">📋</h2>
 
-            <!-- Formulário -->
-            <div class="row g-2 mb-3">
-                <div class="col-7">
-                    <input type="text" id="produto" class="form-control" placeholder="Digite um produto">
+                <!-- Formulário -->
+                <div class="row g-2 mb-3">
+                    <div class="col-7">
+                        <input type="text" id="produto" class="form-control" placeholder="Digite um produto">
+                    </div>
+                    <div class="col-3">
+                        <input type="number" id="quantidade" class="form-control" placeholder="Qtd" min="1">
+                    </div>
+                    <div class="col-2 d-grid">
+                        <button class="btn btn-add" onclick="adicionarProduto()">+</button>
+                    </div>
                 </div>
-                <div class="col-3">
-                    <input type="number" id="quantidade" class="form-control" placeholder="Qtd" min="1">
-                </div>
-                <div class="col-2 d-grid">
-                    <button class="btn btn-add" onclick="adicionarProduto()">+</button>
-                </div>
+
+                <!-- Lista -->
+                <ul id="lista" class="list-group"></ul>
             </div>
-
-            <!-- Lista -->
-            <ul id="lista" class="list-group"></ul>
         </div>
-    </div>
+
 
     <!-- FOOTER -->
     <footer>
