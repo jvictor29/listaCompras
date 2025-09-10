@@ -88,3 +88,17 @@
      align-items: center;
      justify-content: center;
  }
+
+/* botao LIMPAR LISTA */
+
+.button-limparLista {
+  background-color: #a11919;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 8px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}

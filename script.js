@@ -74,6 +74,14 @@ function marcarComprado(index) {
     renderizarLista();
 }
 
+function limparLista() {
+    if (confirm("Tem certeza que deseja limpar toda a lista?")) {
+        lista = [];
+        salvarLista();
+        renderizarLista();
+    }
+}
+
 // Inicializa a lista ao carregar a página
 window.onload = function() {
     carregarLista();

@@ -12,20 +12,21 @@
 </head>
 
 <body class="bg-img">
-    <!-- HEADER -->
+
     <header>
-        🛍️ Minha Lista de Compras
+        🛍️ Minha Lista
     </header>
 
-    <!-- CONTEÚDO -->
-    <div class="container my-4 flex-grow-1 ">
+    <main>
+        <!-- CONTEÚDO -->
+        <div class="container my-4 flex-grow-1 ">
             <div class="card p-4">
                 <h2 class="text-center mb-4 text-success">📋</h2>
 
                 <!-- Formulário -->
                 <div class="row g-2 mb-3">
                     <div class="col-7">
-                        <input type="text" id="produto" class="form-control" placeholder="Digite um produto">
+                        <input type="text" id="produto" class="form-control" placeholder="Adicione um produto">
                     </div>
                     <div class="col-3">
                         <input type="number" id="quantidade" class="form-control" placeholder="Qtd" min="1">
@@ -33,19 +34,22 @@
                     <div class="col-2 d-grid">
                         <button class="btn btn-add" onclick="adicionarProduto()">+</button>
                     </div>
+
+                    <!-- botao limpar lista -->
+                    <div class="">
+                        <a href="#" class="button-limparLista" onclick="limparLista()">Limpar Lista</a>
+                    </div>
                 </div>
 
                 <!-- Lista -->
                 <ul id="lista" class="list-group"></ul>
             </div>
         </div>
-
-
-    <!-- FOOTER -->
+    </main>
+    
     <footer>
         <p>Projeto desenvolvido por <a href="https://devjoaovictor.netlify.app/"><strong>João Victor</strong></a></p>
     </footer>
 
 </body>
-
 </html>
