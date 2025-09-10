@@ -15,12 +15,6 @@
      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
  }
 
- /* .bg-img {
-    background-image: url('img/background.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
-
 .bg-img {
     background-image: url('img/background.jpg');
     background-size: cover;
